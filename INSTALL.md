@@ -40,21 +40,18 @@ $ bash analyzers/init_env.sh
 ```
 $ export PATH=$PATH:$PWD/analyzers/defects4j/framework/bin
 ```
-### 2. Running tools (1 hour to 1+ days)
+### 2. Running tools (8 hours to 1+ days)
+Either run a specific tool tool (e.g. spotbugs) or all the tools. We recommend running a specific tool due to time constraints.
+#### Running a specific tool (Recommended)
+```
+$ bash analyzers/run_tools.sh -t spotbugs
+```
+Note: Inputs supported are: checker-framework, eradicate, infer, nullaway, spotbugs.
 #### Running all tools
 ```
 $ bash analyzers/run_tools.sh
 ```
-#### Optional: Running the study on a sample of bugs
-```
-$ bash analyzers/run_tools.sh -b data/bugs/bugswarm-subset.bugs -d analyzers/d4j_with_info-sample.input -n analyzers/nullaway/d4j/nullaway-sample.input
-```
-#### Running a specific tool
-**This step is not required. Only run this if you want to see the warnings for a specific tool.**
-```
-$ bash analyzers/run_tools.sh -t <tool-name>
-```
-Note: Inputs supported are: checker-framework, eradicate, infer, nullaway, spotbugs.
+
 ### 3. Parsing tool reports (~5 minute)
 ![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 #### A. Parse tool reports
@@ -67,7 +64,7 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 ```
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
-##### If ran single tool
+##### If ran specific tool
 ```
 $ bash scripts/database/db_wrapper.sh -r
 ```
