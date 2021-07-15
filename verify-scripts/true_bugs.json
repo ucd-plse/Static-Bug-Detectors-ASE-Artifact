@@ -1,0 +1,520 @@
+{
+    "sblt": {
+        "code_diff": [
+            {
+                "image_tag": "Cli-5",
+                "file": "UtilTest.java",
+                "warning": "NP_NULL_PARAM_DEREF_NONVIRTUAL",
+                "line_num": "0"
+            },
+            {
+                "image_tag": "JacksonDatabind-3",
+                "file": "StringArrayDeserializer.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "63"
+            }
+        ],
+        "report_diff": [
+            "Cli-5",
+            "JacksonDatabind-3",
+            "yamcs-yamcs-218364663",
+            "tananaev-traccar-64783123",
+            "openpnp-openpnp-213669200",
+            "tananaev-traccar-255051211"
+        ],
+        "stack_trace": [
+            {
+                "image_tag": "tananaev-traccar-255051211",
+                "file": "org/traccar/protocol/TrvProtocolDecoder.java",
+                "warning": "NP_GUARANTEED_DEREF",
+                "line_num": "96"
+            },
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "NP_NULL_PARAM_DEREF",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "95"
+            },
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231969",
+                "file": "com/adobe/acs/commons/mcp/model/GenericReport.java",
+                "warning": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+                "line_num": "71"
+            },
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231978",
+                "file": "com/adobe/acs/commons/mcp/model/GenericReport.java",
+                "warning": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+                "line_num": "71"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "NP_NULL_PARAM_DEREF",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "95"
+            },
+            {
+                "image_tag": "yamcs-yamcs-218364663",
+                "file": "org/yamcs/api/rest/HttpClient.java",
+                "warning": "NP_NULL_ON_SOME_PATH",
+                "line_num": "298"
+            }
+        ]
+    },
+    "sbht": {
+        "code_diff": [
+            {
+                "image_tag": "Cli-5",
+                "file": "UtilTest.java",
+                "warning": "NP_NULL_PARAM_DEREF_NONVIRTUAL",
+                "line_num": "0"
+            },
+            {
+                "image_tag": "JacksonDatabind-3",
+                "file": "StringArrayDeserializer.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "63"
+            }
+        ],
+        "report_diff": [
+            "Cli-5",
+            "JacksonDatabind-3",
+            "yamcs-yamcs-218364663",
+            "tananaev-traccar-64783123"
+        ],
+        "stack_trace": [
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "95"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "95"
+            },
+            {
+                "image_tag": "yamcs-yamcs-218364663",
+                "file": "org/yamcs/api/rest/HttpClient.java",
+                "warning": "NP_NULL_ON_SOME_PATH",
+                "line_num": "298"
+            }
+        ]
+    },
+    "eradicate": {
+        "code_diff": [
+            {
+                "image_tag": "SpigotMC-BungeeCord-130330788",
+                "file": "proxy/src/main/java/net/md_5/bungee/ConnectionThrottle.java",
+                "warning": "ERADICATE_NULL_METHOD_CALL",
+                "line_num": "21"
+            },
+            {
+                "image_tag": "square-okhttp-93618854",
+                "file": "okhttp/src/main/java/com/squareup/okhttp/internal/http/StreamAllocation.java",
+                "warning": "ERADICATE_FIELD_NOT_INITIALIZED",
+                "line_num": "0"
+            },
+            {
+                "image_tag": "swagger-api-swagger-core-390509591",
+                "file": "modules/swagger-models/src/test/java/io/swagger/PojosTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "102"
+            },
+            {
+                "image_tag": "winder-Universal-G-Code-Sender-172454077",
+                "file": "ugs-core/src/com/willwinder/universalgcodesender/GrblController.java",
+                "warning": "ERADICATE_FIELD_NOT_NULLABLE",
+                "line_num": "59"
+            },
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231969",
+                "file": "bundle/src/main/java/com/adobe/acs/commons/mcp/impl/processes/asset/UrlAssetImport.java",
+                "warning": "ERADICATE_NULL_METHOD_CALL",
+                "line_num": "299"
+            },
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231978",
+                "file": "bundle/src/main/java/com/adobe/acs/commons/mcp/impl/processes/asset/UrlAssetImport.java",
+                "warning": "ERADICATE_NULL_METHOD_CALL",
+                "line_num": "299"
+            },
+            {
+                "image_tag": "apache-dubbo-416755517",
+                "file": "dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/support/AbstractClusterInvokerTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "160"
+            },
+            {
+                "image_tag": "Cli-5",
+                "file": "UtilTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "0"
+            }
+        ],
+        "report_diff": [
+            "Adobe-Consulting-Services-acs-aem-commons-374231969",
+            "Adobe-Consulting-Services-acs-aem-commons-374231978",
+            "swagger-api-swagger-core-390509591",
+            "winder-Universal-G-Code-Sender-172454077",
+            "languagetool-org-languagetool-488522531",
+            "SynBioDex-libSBOLj-109899408"
+        ],
+        "stack_trace": [
+            {
+                "image_tag": "SpigotMC-BungeeCord-130330788",
+                "file": "proxy/src/main/java/net/md_5/bungee/ConnectionThrottle.java",
+                "warning": "ERADICATE_NULL_METHOD_CALL",
+                "line_num": "24"
+            },
+            {
+                "image_tag": "swagger-api-swagger-core-390509591",
+                "file": "modules/swagger-models/src/test/java/io/swagger/PojosTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "113"
+            },
+            {
+                "image_tag": "Cli-5",
+                "file": "src/test/org/apache/commons/cli/UtilTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "28"
+            },
+            {
+                "image_tag": "apache-dubbo-416755517",
+                "file": "dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/support/AbstractClusterInvokerTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "192"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "graphhopper-graphhopper-136464635",
+                "file": "tools/src/main/java/com/graphhopper/tools/QueryTorture.java",
+                "warning": "ERADICATE_RETURN_NOT_NULLABLE",
+                "line_num": "280"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-488522531",
+                "file": "languagetool-core/src/main/java/org/languagetool/JLanguageTool.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "672"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-546883807",
+                "file": "languagetool-office-extension/src/test/java/org/languagetool/openoffice/MainTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "90"
+            },
+            {
+                "image_tag": "mitreid-connect-OpenID-Connect-Java-Spring-Server-358117230",
+                "file": "openid-connect-common/src/main/java/org/mitre/util/JsonUtils.java",
+                "warning": "ERADICATE_RETURN_NOT_NULLABLE",
+                "line_num": "177"
+            },
+            {
+                "image_tag": "SonarSource-sonar-java-297969404",
+                "file": "java-frontend/src/main/java/org/sonar/java/bytecode/se/MethodLookup.java",
+                "warning": "ERADICATE_RETURN_NOT_NULLABLE",
+                "line_num": "72"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-109899408",
+                "file": "core2/src/test/java/org/sbolstandard/core2/ValidationTest.java",
+                "warning": "ERADICATE_NULL_FIELD_ACCESS",
+                "line_num": "74"
+            },
+            {
+                "image_tag": "Cli-5",
+                "file": "src/test/org/apache/commons/cli/UtilTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "28"
+            }
+        ]
+    },
+    "infer": {
+        "code_diff": [
+            {
+                "image_tag": "Cli-5",
+                "file": "UtilTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "0"
+            },
+            {
+                "image_tag": "square-okhttp-93618854",
+                "file": "okhttp/src/main/java/com/squareup/okhttp/internal/http/StreamAllocation.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "0"
+            }
+        ],
+        "report_diff": [
+            "SynBioDex-libSBOLj-88851754"
+        ],
+        "stack_trace": [
+            {
+                "image_tag": "SynBioDex-libSBOLj-88851754",
+                "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "494"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-109899408",
+                "file": "core2/src/test/java/org/sbolstandard/core2/ValidationTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "74"
+            },
+            {
+                "image_tag": "SonarSource-sonar-java-297969404",
+                "file": "java-frontend/src/test/java/org/sonar/java/bytecode/se/MethodLookupTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "48"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-546883807",
+                "file": "languagetool-office-extension/src/test/java/org/languagetool/openoffice/MainTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "90"
+            },
+            {
+                "image_tag": "math-4",
+                "file": "src/main/java/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "120"
+            },
+            {
+                "image_tag": "Cli-5",
+                "file": "src/test/org/apache/commons/cli/UtilTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "28"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "Cli-5",
+                "file": "src/test/org/apache/commons/cli/UtilTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "28"
+            },
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "src/main/java/org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-88818413",
+                "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "494"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-546883807",
+                "file": "languagetool-office-extension/src/test/java/org/languagetool/openoffice/MainTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "90"
+            },
+            {
+                "image_tag": "SonarSource-sonar-java-297969404",
+                "file": "java-frontend/src/test/java/org/sonar/java/bytecode/se/MethodLookupTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "48"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-109899408",
+                "file": "core2/src/test/java/org/sbolstandard/core2/ValidationTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "74"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-88851754",
+                "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "494"
+            }
+        ]
+    },
+    "nullaway": {
+        "code_diff": [],
+        "report_diff": [],
+        "stack_trace": [
+            {
+                "image_tag": "apache-dubbo-416671625",
+                "file": "/home/travis/build/failed/apache/dubbo/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/ConditionRouter.java",
+                "warning": "passing @Nullable parameter null where @NonNull is required",
+                "line_num": "196"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "graphhopper-graphhopper-136464635",
+                "file": "/home/travis/build/failed/graphhopper/graphhopper/tools/src/main/java/com/graphhopper/tools/QueryTorture.java",
+                "warning": "returning @Nullable expression from method with @NonNull return type",
+                "line_num": "285"
+            },
+            {
+                "image_tag": "mitreid-connect-OpenID-Connect-Java-Spring-Server-358117230",
+                "file": "/home/travis/build/failed/mitreid-connect/OpenID-Connect-Java-Spring-Server/openid-connect-common/src/main/java/org/mitre/util/JsonUtils.java",
+                "warning": "returning @Nullable expression from method with @NonNull return type",
+                "line_num": "186"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-88851754",
+                "file": "/home/travis/build/failed/SynBioDex/libSBOLj/core2/src/main/java/org/sbolstandard/core2/SBOLDocument.java",
+                "warning": "returning @Nullable expression from method with @NonNull return type",
+                "line_num": "1616"
+            },
+            {
+                "image_tag": "tananaev-traccar-192220170",
+                "file": "/home/travis/build/failed/tananaev/traccar/src/org/traccar/model/Network.java",
+                "warning": "initializer method does not guarantee @NonNull fields homeMobileCountryCode homeMobileNetworkCode carrier cellTowers wifiAccessPoints are initialized along all control-flow paths (remember to check for exceptions or early returns)",
+                "line_num": "26"
+            },
+            {
+                "image_tag": "apache-dubbo-416671625",
+                "file": "/home/travis/build/failed/apache/dubbo/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/ConditionRouter.java",
+                "warning": "initializer method does not guarantee @NonNull field thenCondition is initialized along all control-flow paths (remember to check for exceptions or early returns)",
+                "line_num": "55"
+            }
+        ]
+    },
+    "cfnullness": {
+        "code_diff": [
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231969",
+                "file": "bundle/src/main/java/com/adobe/acs/commons/mcp/impl/processes/asset/UrlAssetImport.java",
+                "warning": "dereference of possibly-null reference assetDataget(RENDITION_NAME)",
+                "line_num": "299"
+            },
+            {
+                "image_tag": "Adobe-Consulting-Services-acs-aem-commons-374231978",
+                "file": "bundle/src/main/java/com/adobe/acs/commons/mcp/impl/processes/asset/UrlAssetImport.java",
+                "warning": "dereference of possibly-null reference assetDataget(RENDITION_NAME)",
+                "line_num": "299"
+            },
+            {
+                "image_tag": "SpigotMC-BungeeCord-130330788",
+                "file": "proxy/src/main/java/net/md_5/bungee/ConnectionThrottle.java",
+                "warning": "unboxing a possibly-null reference throttlegetIfPresent(address)",
+                "line_num": "21"
+            },
+            {
+                "image_tag": "swagger-api-swagger-core-390509591",
+                "file": "modules/swagger-models/src/test/java/io/swagger/PojosTest.java",
+                "warning": "incompatible argument for parameter exclusions of testEquals",
+                "line_num": "102"
+            },
+            {
+                "image_tag": "Cli-30",
+                "file": "ParserTestCase.java",
+                "warning": "the constructor does not initialize fields: parser options",
+                "line_num": "26"
+            },
+            {
+                "image_tag": "JacksonDatabind-93",
+                "file": "SubTypeValidator.java",
+                "warning": "dereference of possibly-null reference cls",
+                "line_num": "80"
+            }
+        ],
+        "report_diff": [
+            "JacksonDatabind-93",
+            "Adobe-Consulting-Services-acs-aem-commons-374231969",
+            "Adobe-Consulting-Services-acs-aem-commons-374231978",
+            "SpigotMC-BungeeCord-130330788",
+            "SynBioDex-libSBOLj-109899408"
+        ],
+        "stack_trace": [
+            {
+                "image_tag": "JacksonDatabind-93",
+                "file": "/home/dtomassi/d4j-cf/JacksonDatabind-93b/src/main/java/com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java",
+                "warning": "dereference of possibly-null reference cls",
+                "line_num": "85"
+            },
+            {
+                "image_tag": "JacksonDatabind-95",
+                "file": "/home/dtomassi/d4j-cf/JacksonDatabind-95b/src/main/java/com/fasterxml/jackson/databind/type/TypeParser.java",
+                "warning": "incompatible argument for parameter bindings of _fromClass",
+                "line_num": "59"
+            },
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "/home/travis/build/failed/openpnp/openpnp/src/main/java/org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "incompatible argument for parameter mat of saveDebugImage",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "SonarSource-sonar-java-297969373",
+                "file": "/home/travis/build/failed/SonarSource/sonar-java/java-frontend/src/test/java/org/sonar/java/bytecode/se/MethodLookupTest.java",
+                "warning": "dereference of possibly-null reference lookup",
+                "line_num": "48"
+            },
+            {
+                "image_tag": "SpigotMC-BungeeCord-130330788",
+                "file": "/home/travis/build/failed/SpigotMC/BungeeCord/proxy/src/main/java/net/md_5/bungee/ConnectionThrottle.java",
+                "warning": "unboxing a possibly-null reference throttlegetIfPresent(address)",
+                "line_num": "24"
+            },
+            {
+                "image_tag": "swagger-api-swagger-core-390509591",
+                "file": "/home/travis/build/failed/swagger-api/swagger-core/modules/swagger-models/src/test/java/io/swagger/PojosTest.java",
+                "warning": "incompatible argument for parameter exclusions of testEquals",
+                "line_num": "113"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "/home/travis/build/failed/tananaev/traccar/test/org/traccar/protocol/CastelProtocolDecoderTest.java",
+                "warning": "incompatible argument for parameter channel of decode",
+                "line_num": "20"
+            }
+        ],
+        "covered_lines": [
+            {
+                "image_tag": "languagetool-org-languagetool-546883807",
+                "file": "/home/travis/build/failed/languagetool-org/languagetool/languagetool-office-extension/src/main/java/org/languagetool/openoffice/SingleDocument.java",
+                "warning": "call to setConfigValues(orglanguagetoolguiConfiguration) not allowed on the given receiver",
+                "line_num": "111"
+            },
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "/home/travis/build/failed/openpnp/openpnp/src/main/java/org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "incompatible argument for parameter mat of saveDebugImage",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "swagger-api-swagger-core-390509591",
+                "file": "/home/travis/build/failed/swagger-api/swagger-core/modules/swagger-models/src/test/java/io/swagger/PojosTest.java",
+                "warning": "incompatible argument for parameter exclusions of testEquals",
+                "line_num": "113"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-109899408",
+                "file": "/home/travis/build/failed/SynBioDex/libSBOLj/core2/src/test/java/org/sbolstandard/core2/ValidationTest.java",
+                "warning": "iterating over possibly-null reference file_baselistFiles()",
+                "line_num": "74"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "/home/travis/build/failed/tananaev/traccar/test/org/traccar/protocol/CastelProtocolDecoderTest.java",
+                "warning": "incompatible argument for parameter channel of decode",
+                "line_num": "20"
+            }
+        ]
+    }
+}
