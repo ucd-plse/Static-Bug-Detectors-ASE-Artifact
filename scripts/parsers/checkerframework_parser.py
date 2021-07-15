@@ -52,7 +52,7 @@ def main(argv=None):
                                 CFBug(image_tag, filename, line_num, line_num,
                                             bug_type, version))
 
-    with open(abspath('{}/results/checker-framework-warnings.csv'.format(SCRIPT_DIR)), 'w+') as file:
+    with open(abspath('{}/results/cfnullness.warnings'.format(SCRIPT_DIR)), 'w+') as file:
         for bug in bug_list:
             file.write('{}\n'.format(bug.to_CSV()))
 

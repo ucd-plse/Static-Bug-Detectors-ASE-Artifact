@@ -52,7 +52,8 @@ def main(argv=None):
                                     bug_class.SourceLine.get('start'),
                                     bug_class.SourceLine.get('end')))
 
-    with open(abspath('{}/results/spotbugs-{}-warnings.csv'.format(SCRIPT_DIR, l_or_h)), 'w+') as file:
+    sb_config = 'lt' if l_or_h == 'low' else 'ht'
+    with open(abspath('{}/results/sb{}.warnings'.format(SCRIPT_DIR, sb_config)), 'w+') as file:
         for bug in bug_list:
             file.write('{}\n'.format(bug.to_CSV()))
 

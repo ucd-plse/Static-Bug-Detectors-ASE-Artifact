@@ -51,7 +51,7 @@ def main(argv=None):
                                 NullAwayBug(line, filename, patch, patch,
                                             bug_type, version))
 
-    with open(abspath('{}/results/nullaway-output.csv'.format(SCRIPT_DIR)), 'w+') as file:
+    with open(abspath('{}/results/nullaway.warnings'.format(SCRIPT_DIR)), 'w+') as file:
         for bug in bug_list:
             file.write('{}\n'.format(bug.to_CSV()))
 

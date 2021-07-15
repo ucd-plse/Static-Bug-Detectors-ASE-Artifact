@@ -78,7 +78,7 @@ def main(argv=None):
                         bugs_list.append('{},{},{},{},{},{}\n'.format(image_tag.strip(), f_or_p.strip(), bug['file'].strip(), bug['bug_type'].strip(), bug['line'], bug['line']))
             except BaseException as e:
                 continue
-    with open(abspath('{}/results/{}-warnings.csv'.format(SCRIPT_DIR, infer_or_erad)), 'w+') as output_file:
+    with open(abspath('{}/results/{}.warnings'.format(SCRIPT_DIR, infer_or_erad)), 'w+') as output_file:
         for bug in bugs_list:
             output_file.write(bug)
 
