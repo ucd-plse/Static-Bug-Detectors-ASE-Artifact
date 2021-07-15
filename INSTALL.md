@@ -40,21 +40,20 @@ $ bash analyzers/init_env.sh
 ```
 $ export PATH=$PATH:$PWD/analyzers/defects4j/framework/bin
 ```
-### 2. Running tools (1+ days)
+### 2. Running tools (1 hour to 1+ days)
 #### Running all tools
 ```
 $ bash analyzers/run_tools.sh
-```
-#### Optional: Running a specific tool
-```
-$ bash analyzers/run_tools.sh -t <tool-name>
 ```
 Note: Inputs supported are: checker-framework, eradicate, infer, nullaway, spotbugs.
 #### Optional: Running the study on a sample of bugs
 ```
 $ bash analyzers/run_tools.sh -b data/bugs/bugswarm-subset.bugs -d analyzers/d4j_with_info-sample.input -n analyzers/nullaway/d4j/nullaway-sample.input
 ```
-
+#### Optional: Running a specific tool
+```
+$ bash analyzers/run_tools.sh -t <tool-name>
+```
 ### 3. Parsing tool reports (~5 minute)
 ![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 #### A. Parse tool reports
