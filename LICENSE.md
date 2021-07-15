@@ -1,6 +1,7 @@
 BSD 3-Clause License
 
 Copyright (c) 2021, University of California
+          
           David A. Tomassi <datomassi@ucdavis.edu>
           Cindy Rubio-González <crubio@ucdavis.edu>
 All rights reserved.

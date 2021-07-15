@@ -1,5 +1,5 @@
 # On the Real-World Effectiveness of Static Bug Detectors at Finding Null Pointer Exceptions
-![Workflow](https://github.com/ucd-plse/Static-Analyzer-Study/blob/master/paper/figs/workflow-not-transparent.png)
+![Workflow](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/workflow-not-transparent.png)
 ## Data
 All data used in the results are located under `data/`
 #### Bug IDs (in `data/bugs/`)
@@ -40,23 +40,23 @@ $ bash analyzers/init_env.sh
 ```
 $ export PATH=$PATH:$PWD/analyzers/defects4j/framework/bin
 ```
-### 2. Running tools (1+ days)
+### 2. Running tools (1 hour to 1+ days)
 #### Running all tools
 ```
 $ bash analyzers/run_tools.sh
 ```
-#### Optional: Running a specific tool
-```
-$ bash analyzers/run_tools.sh -t <tool-name>
-```
-Note: Inputs supported are: checker-framework, eradicate, infer, nullaway, spotbugs.
 #### Optional: Running the study on a sample of bugs
 ```
 $ bash analyzers/run_tools.sh -b data/bugs/bugswarm-subset.bugs -d analyzers/d4j_with_info-sample.input -n analyzers/nullaway/d4j/nullaway-sample.input
 ```
-
+#### Running a specific tool
+**This step is not required. Only run this if you want to see the warnings for a specific tool.**
+```
+$ bash analyzers/run_tools.sh -t <tool-name>
+```
+Note: Inputs supported are: checker-framework, eradicate, infer, nullaway, spotbugs.
 ### 3. Parsing tool reports (~5 minute)
-![tableiii](https://github.com/ucd-plse/Static-Analyzer-Study/blob/dt-ase-artifact/tableiii.png)
+![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 #### A. Parse tool reports
 ```
 $ bash scripts/parsers/run_parsers.sh
@@ -71,7 +71,7 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 $ bash scripts/database/db_wrapper.sh
 ```
 ### 5. Bug Candidates (~5 hours)
-![tableiv](https://github.com/ucd-plse/Static-Analyzer-Study/blob/master/tableiv.png)
+![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)
 #### A. Generating bug candidates via mapping methods (~5 hours)
 Note: All bug candidates needs to be manually inspected to determine if they are true bugs.
 ```
