@@ -67,6 +67,11 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 ```
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
+##### If ran single tool
+```
+$ bash scripts/database/db_wrapper.sh -r
+```
+##### If ran all tools
 ```
 $ bash scripts/database/db_wrapper.sh
 ```

@@ -8,4 +8,4 @@ echo "### Creating Database and Tables ###"
 python3 $SCRIPT_DIR/create_tables.py
 
 echo "### Populating Tables ###"
-bash $SCRIPT_DIR/populate_tables.sh
+bash $SCRIPT_DIR/populate_tables.sh $1
