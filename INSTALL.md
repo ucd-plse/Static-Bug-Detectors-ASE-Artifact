@@ -49,7 +49,8 @@ $ bash analyzers/run_tools.sh
 ```
 $ bash analyzers/run_tools.sh -b data/bugs/bugswarm-subset.bugs -d analyzers/d4j_with_info-sample.input -n analyzers/nullaway/d4j/nullaway-sample.input
 ```
-#### Optional: Running a specific tool
+#### Running a specific tool
+**This step is not required. Only run this if you want to see the warnings for a specific tool.**
 ```
 $ bash analyzers/run_tools.sh -t <tool-name>
 ```
