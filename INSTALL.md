@@ -1,5 +1,5 @@
 # On the Real-World Effectiveness of Static Bug Detectors at Finding Null Pointer Exceptions
-![Workflow](https://github.com/ucd-plse/Static-Analyzer-Study/blob/master/paper/figs/workflow-not-transparent.png)
+![Workflow](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/workflow-not-transparent.png)
 ## Data
 All data used in the results are located under `data/`
 #### Bug IDs (in `data/bugs/`)
@@ -56,7 +56,7 @@ $ bash analyzers/run_tools.sh -b data/bugs/bugswarm-subset.bugs -d analyzers/d4j
 ```
 
 ### 3. Parsing tool reports (~5 minute)
-![tableiii](https://github.com/ucd-plse/Static-Analyzer-Study/blob/dt-ase-artifact/tableiii.png)
+![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 #### A. Parse tool reports
 ```
 $ bash scripts/parsers/run_parsers.sh
@@ -71,7 +71,7 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 $ bash scripts/database/db_wrapper.sh
 ```
 ### 5. Bug Candidates (~5 hours)
-![tableiv](https://github.com/ucd-plse/Static-Analyzer-Study/blob/master/tableiv.png)
+![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)
 #### A. Generating bug candidates via mapping methods (~5 hours)
 Note: All bug candidates needs to be manually inspected to determine if they are true bugs.
 ```
