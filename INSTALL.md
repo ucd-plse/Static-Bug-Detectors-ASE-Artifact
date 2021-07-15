@@ -64,26 +64,28 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 ```
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
-##### If ran specific tool
+We offer two options for getting results for Table IV. The first is to use the reproduced warnings that were generated when you ran Step 2. This option may not have the same results as the study due to a bug under study becoming unreproducible. To avoid this issue, you may use the tool warnings we observed in the study. This will produce the exact results reported in Table IV.
+##### Use reproduced warnings
 ```
 $ bash scripts/database/db_wrapper.sh -r
 ```
-##### If ran all tools
+##### Use study warnings
 ```
 $ bash scripts/database/db_wrapper.sh
 ```
-### 5. Bug Candidates (~5 hours)
+### 5. Bug Candidates (2 - 5 hours)
 ![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)
-#### A. Generating bug candidates via mapping methods (~5 hours)
-Note: All bug candidates needs to be manually inspected to determine if they are true bugs.
+#### A. Generating bug candidates via mapping methods (2 - 5 hours)
 ```
 $ python3 scripts/database/run_mapping_methods.py
 ```
 #### B. Verifying bug candidates (~1 minute)
+These results are the numerator in Table IV. If using reproduced warnings and single tool, you will only see results for the specific tool that was ran. Note that if using reproduced warnings the results may not match due to a bug under study becoming unreproducible.
 ```
 $ python3 verify-scripts/verify_bug_candidates.py bug_candidates.json
 ```
 #### C. Verifying true bugs (~1 minute)
+These results are the denominator in Table IV. If using reproduced warnings and single tool, you will only see results for the specific tool that was ran. Note that if using reproduced warnings the results may not match due to a bug under study becoming unreproducible.
 ```
 $ python3 verify-scripts/verify_true_bugs.py bug_candidates.json
 ```
