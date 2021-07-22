@@ -53,15 +53,16 @@ $ bash analyzers/run_tools.sh
 ```
 
 ### 3. Parsing tool reports (~5 minute)
-![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 #### A. Parse tool reports
 ```
 $ bash scripts/parsers/run_parsers.sh
 ```
 #### B. Verify tool warnings
+If ran only a specific tool then only that tool should match. All other tools will have 0 warnings. If bugs under study have become unreproducible then this may cause a mismatch in number of warnings.
 ```
 $ bash verify-scripts/run_verify_tool_warnings.sh
 ```
+![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
 We offer two options for getting results for Table IV. The first is to use the reproduced warnings that were generated when you ran Step 2. This option may not have the same results as the study due to a bug under study becoming unreproducible. To avoid this issue, you may use the tool warnings we observed in the study. This will produce the exact results reported in Table IV.
