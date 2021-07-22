@@ -5,7 +5,8 @@ from db_utils import DatabaseConnection
 
 # Configure DB.
 DB = DatabaseConnection('root', 'password')
-DB.select_database('analyzer_study')
+db_name = sys.argv[1]
+DB.select_database(db_name)
 
 # Tool and mapping method constants.
 TOOLS = ['sblt', 'sbht', 'eradicate', 'infer', 'nullaway', 'cfnullness']

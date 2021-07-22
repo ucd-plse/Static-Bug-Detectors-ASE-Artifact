@@ -78,7 +78,7 @@ $ bash scripts/database/db_wrapper.sh -d study_db
 ![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)
 #### A. Generating bug candidates via mapping methods (2 - 5 hours)
 ```
-$ python3 scripts/database/run_mapping_methods.py
+$ python3 scripts/database/run_mapping_methods.py study_db
 ```
 #### B. Verifying bug candidates (~1 minute)
 These results are the numerator in Table IV. If using reproduced warnings and single tool, you will only see results for the specific tool that was ran. Note that if using reproduced warnings the results may not match due to a bug under study becoming unreproducible.
