@@ -9,11 +9,12 @@ warnings_dir="../../data/tool-warnings/"
 auxs_dir="../../data/auxiliary-data/"
 
 # Extract command line arguments.
-OPTS=$(getopt -o r --name "$0" -- "$@")
+OPTS=$(getopt -o d:r --name "$0" -- "$@")
 while true; do
     case "$1" in
-      -r            ) repro_flag="$1"; shift;;
-      *             ) break                             ;;
+      -r            ) repro_flag="$1"; shift        ;;
+	  -d            ) db_name="$2"; shift; shift    ;;
+      *             ) break                         ;;
     esac
 done
 
@@ -25,10 +26,10 @@ fi
 
 for tool in "${tools[@]}"
 do
-    python3 $SCRIPT_DIR/$populate_script $SCRIPT_DIR/$warnings_dir$tool.warnings $tool
+    python3 $SCRIPT_DIR/$populate_script $SCRIPT_DIR/$warnings_dir$tool.warnings $tool $db_name
 done
 
 for aux in "${auxs[@]}"
 do
-    python3 $SCRIPT_DIR/$populate_script $SCRIPT_DIR/$auxs_dir$aux.csv $aux
+    python3 $SCRIPT_DIR/$populate_script $SCRIPT_DIR/$auxs_dir$aux.csv $aux $db_name
 done

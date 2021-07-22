@@ -67,11 +67,11 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 We offer two options for getting results for Table IV. The first is to use the reproduced warnings that were generated when you ran Step 2. This option may not have the same results as the study due to a bug under study becoming unreproducible. To avoid this issue, you may use the tool warnings we observed in the study. This will produce the exact results reported in Table IV.
 ##### Use reproduced warnings
 ```
-$ bash scripts/database/db_wrapper.sh -r
+$ bash scripts/database/db_wrapper.sh -r -d study_db
 ```
 ##### Use study warnings
 ```
-$ bash scripts/database/db_wrapper.sh
+$ bash scripts/database/db_wrapper.sh -d study_db
 ```
 ### 5. Bug Candidates (2 - 5 hours)
 ![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)

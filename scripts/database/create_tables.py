@@ -7,11 +7,12 @@ from db_utils import DatabaseConnection
 
 
 def main():
+    db_name = sys.argv[1]
     db = DatabaseConnection('root', 'password')
 
     # Create and select DB
-    db.create_db('analyzer_study')
-    db.select_database('analyzer_study')
+    db.create_db(db_name)
+    db.select_database(db_name)
 
     # Create auxillary data tables
     db.create_clover_table('covered_lines')

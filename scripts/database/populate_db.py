@@ -11,10 +11,10 @@ from db_utils import DatabaseConnection
 def main(argv=None):
     argv = argv or sys.argv
 
-    image_tag_file, table_name = _validate_input(argv)
+    image_tag_file, table_name, db_name = _validate_input(argv)
 
     db = DatabaseConnection('root', 'password')
-    db.select_database('analyzer_study')
+    db.select_database(db_name)
     value_tuples = []
     with open(image_tag_file) as file:
         value_tuples = [line.strip().split(',') for line in file.readlines()]
@@ -39,14 +39,13 @@ def _print_usage():
 
 
 def _validate_input(argv):
-    if len(argv) != 3:
+    if len(argv) != 4:
         _print_usage()
         sys.exit(1)
     image_tag_file = argv[1]
     table_name = argv[2]
-    print(image_tag_file)
-    print(table_name)
-    return image_tag_file, table_name
+    db_name = argv[3]
+    return image_tag_file, table_name, db_name
 
 
 if __name__ == '__main__':
