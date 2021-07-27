@@ -60,6 +60,12 @@
                 "line_num": "150"
             },
             {
+                "image_tag": "SonarSource-sonar-java-297969373",
+                "file": "MethodLookupTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "48"
+            },
+            {
                 "image_tag": "tananaev-traccar-64783123",
                 "file": "org/traccar/protocol/CastelProtocolDecoder.java",
                 "warning": "NP_ALWAYS_NULL",
@@ -240,6 +246,24 @@
                 "line_num": "113"
             },
             {
+                "image_tag": "junkdog-artemis-odb-74488108",
+                "file": "artemis-json/src/main/java/com/artemis/io/EntitySerializer.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "164"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-109899408",
+                "file": "core2/src/test/java/org/sbolstandard/core2/ValidationTest.java",
+                "warning": "ERADICATE_NULL_FIELD_ACCESS",
+                "line_num": "74"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-488522531",
+                "file": "languagetool-standalone/src/test/java/org/languagetool/JLanguageToolTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "248"
+            },
+            {
                 "image_tag": "Cli-5",
                 "file": "src/test/org/apache/commons/cli/UtilTest.java",
                 "warning": "NULL_DEREFERENCE",
@@ -327,6 +351,24 @@
                 "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
                 "warning": "NULL_DEREFERENCE",
                 "line_num": "494"
+            },
+            {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "src/main/java/org/openpnp/machine/reference/vision/OpenCvVisionProvider.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "150"
+            },
+            {
+                "image_tag": "SynBioDex-libSBOLj-88818413",
+                "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "494"
+            },
+            {
+                "image_tag": "tananaev-traccar-255051211",
+                "file": "test/org/traccar/ProtocolTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "90"
             },
             {
                 "image_tag": "SynBioDex-libSBOLj-109899408",
