@@ -8,6 +8,30 @@
                 "line_num": "0"
             },
             {
+                "image_tag": "openpnp-openpnp-213669200",
+                "file": "src/main/java/org/openpnp/util/OpenCvUtils.java",
+                "warning": "NP_NULL_PARAM_DEREF",
+                "line_num": "239"
+            },
+            {
+                "image_tag": "tananaev-traccar-255051211",
+                "file": "src/org/traccar/BaseProtocolDecoder.java",
+                "warning": "NP_NULL_PARAM_DEREF",
+                "line_num": "106"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "src/org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "80"
+            },
+            {
+                "image_tag": "yamcs-yamcs-218364663",
+                "file": "yamcs-api/src/main/java/org/yamcs/api/rest/HttpClient.java",
+                "warning": "NP_NULL_ON_SOME_PATH",
+                "line_num": "295"
+            },
+            {
                 "image_tag": "JacksonDatabind-3",
                 "file": "StringArrayDeserializer.java",
                 "warning": "NP_ALWAYS_NULL",
@@ -82,6 +106,18 @@
                 "file": "UtilTest.java",
                 "warning": "NP_NULL_PARAM_DEREF_NONVIRTUAL",
                 "line_num": "0"
+            },
+            {
+                "image_tag": "tananaev-traccar-64783123",
+                "file": "src/org/traccar/protocol/CastelProtocolDecoder.java",
+                "warning": "NP_ALWAYS_NULL",
+                "line_num": "80"
+            },
+            {
+                "image_tag": "yamcs-yamcs-218364663",
+                "file": "yamcs-api/src/main/java/org/yamcs/api/rest/HttpClient.java",
+                "warning": "NP_NULL_ON_SOME_PATH",
+                "line_num": "295"
             },
             {
                 "image_tag": "JacksonDatabind-3",
@@ -162,6 +198,18 @@
                 "file": "dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/support/AbstractClusterInvokerTest.java",
                 "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
                 "line_num": "160"
+            },
+            {
+                "image_tag": "languagetool-org-languagetool-488522531",
+                "file": "languagetool-language-modules/en/src/test/java/org/languagetool/JLanguageToolTest.java",
+                "warning": "ERADICATE_RETURN_NOT_NULLABLE",
+                "line_num": "266"
+            },
+            {
+                "image_tag": "SonarSource-sonar-java-295864289",
+                "file": "java-frontend/src/main/java/org/sonar/java/se/xproc/MethodBehavior.java",
+                "warning": "ERADICATE_FIELD_NOT_INITIALIZED",
+                "line_num": "45"
             },
             {
                 "image_tag": "Cli-5",
@@ -252,10 +300,16 @@
     "infer": {
         "code_diff": [
             {
+                "image_tag": "SynBioDex-libSBOLj-88851754",
+                "file": "core2/src/test/java/org/sbolstandard/core2/SBOLDocumentTest.java",
+                "warning": "NULL_DEREFERENCE",
+                "line_num": "494"
+            },
+            {
                 "image_tag": "Cli-5",
                 "file": "UtilTest.java",
                 "warning": "NULL_DEREFERENCE",
-                "line_num": "0"
+                "line_num": "28"
             },
             {
                 "image_tag": "square-okhttp-93618854",
@@ -351,7 +405,14 @@
         ]
     },
     "nullaway": {
-        "code_diff": [],
+        "code_diff": [
+            {
+                "image_tag": "mitreid-connect-OpenID-Connect-Java-Spring-Server-358117230",
+                "file": "openid-connect-common/src/main/java/org/mitre/openid/connect/ClientDetailsEntityJsonProcessor.java",
+                "warning": "returning @Nullable expression from method with @NonNull return type",
+                "line_num": "228"
+            }
+        ],
         "report_diff": [],
         "stack_trace": [
             {

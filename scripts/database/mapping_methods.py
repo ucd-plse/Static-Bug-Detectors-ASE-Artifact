@@ -6,7 +6,8 @@ each respective mapping method.
 def generate_code_diff_query(diff_table: str, tool_table: str) -> str:
     return 'SELECT * FROM `{diff_table}` INNER JOIN `{tool_table}` ON ' \
            '`{diff_table}`.image_tag = `{tool_table}`.image_tag WHERE ' \
-           'LOCATE(`{diff_table}`.file,`{tool_table}`.file) != "" AND ' \
+           'LOCATE(`{diff_table}`.file,`{tool_table}`.file) != "" or '  \
+           'LOCATE(`{tool_table}`.file,`{diff_table}`.file) != "" AND ' \
            '(((`{tool_table}`.bug_lower BETWEEN `{diff_table}`.patch_lower AND ' \
            '`{diff_table}`.patch_upper) OR (`{tool_table}`.bug_upper BETWEEN ' \
            '`{diff_table}`.patch_lower AND `{diff_table}`.patch_upper)) OR ' \
