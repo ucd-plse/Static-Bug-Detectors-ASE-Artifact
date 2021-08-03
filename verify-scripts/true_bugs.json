@@ -227,6 +227,8 @@
         "report_diff": [
             "Adobe-Consulting-Services-acs-aem-commons-374231969",
             "Adobe-Consulting-Services-acs-aem-commons-374231978",
+            "SynBioDex-libSBOLj-88818413",
+            "apache-dubbo-416755517",
             "swagger-api-swagger-core-390509591",
             "winder-Universal-G-Code-Sender-172454077",
             "languagetool-org-languagetool-488522531",
@@ -290,6 +292,12 @@
                 "line_num": "672"
             },
             {
+                "image_tag": "yamcs-yamcs-218364663",
+                "file": "yamcs-core/src/test/java/org/yamcs/api/rest/HttpClientTest.java",
+                "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
+                "line_num": "37"
+            },
+            {
                 "image_tag": "languagetool-org-languagetool-546883807",
                 "file": "languagetool-office-extension/src/test/java/org/languagetool/openoffice/MainTest.java",
                 "warning": "ERADICATE_PARAMETER_NOT_NULLABLE",
@@ -343,6 +351,7 @@
             }
         ],
         "report_diff": [
+            "openpnp-openpnp-213669200",
             "SynBioDex-libSBOLj-88851754"
         ],
         "stack_trace": [
