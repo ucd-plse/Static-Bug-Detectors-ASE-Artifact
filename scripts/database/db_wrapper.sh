@@ -19,10 +19,10 @@ python3 $SCRIPT_DIR/create_tables.py $db_name
 
 if [ -z ${repro_flag} ]; then
 	echo "### Populating Tables ###"
-	bash $SCRIPT_DIR/populate_tables.sh -r -d $db_name
+	bash $SCRIPT_DIR/populate_tables.sh -d $db_name
 else
 	echo "### Populating Tables ###"
-	bash $SCRIPT_DIR/populate_tables.sh -d $db_name
+	bash $SCRIPT_DIR/populate_tables.sh -r -d $db_name
 fi
 
 
