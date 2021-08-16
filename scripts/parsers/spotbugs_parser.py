@@ -43,14 +43,16 @@ def main(argv=None):
                 soup = BeautifulSoup(open(abspath(report)), 'lxml-xml')
                 bug_instance_list = soup.BugCollection.find_all("BugInstance")
                 for bug_instance in bug_instance_list:
-                    for bug_class in bug_instance.find_all('Class'):
-                        if bug_class.SourceLine.get('start') is not None:
-                            bug_list.append(
+                    source_lines = bug_instance.find_all('SourceLine', recursive=False)
+                    for source_line in source_lines:
+                        if source_line.get('start') is None:
+                            continue
+                        bug_list.append(
                                     SpotBugsBug(image_tag, f_or_p,
-                                    bug_class.SourceLine.get('sourcepath'),
+                                    source_line.get('sourcepath'),
                                     bug_instance.get('type'),
-                                    bug_class.SourceLine.get('start'),
-                                    bug_class.SourceLine.get('end')))
+                                    source_line.get('start'),
+                                    source_line.get('end')))
 
     sb_config = 'lt' if l_or_h == 'low' else 'ht'
     with open(abspath('{}/results/sb{}.warnings'.format(SCRIPT_DIR, sb_config)), 'w+') as file:

@@ -2,9 +2,17 @@ import sys
 import pymysql.cursors
 
 from mapping_methods import generate_code_diff_query
+from mapping_methods import generate_code_diff_query_infer
+from mapping_methods import generate_code_diff_query_spotbugs
 from mapping_methods import generate_report_diff_query
-from mapping_methods import generate_stack_trace_query
-from mapping_methods import generate_covered_lines_query
+from mapping_methods import generate_report_diff_query_infer
+from mapping_methods import generate_report_diff_query_spotbugs
+from mapping_methods import generate_covered_lines_original_query
+from mapping_methods import generate_covered_lines_original_query_infer
+from mapping_methods import generate_covered_lines_original_query_spotbugs
+from mapping_methods import generate_stack_trace_original_query
+from mapping_methods import generate_stack_trace_original_query_infer
+from mapping_methods import generate_stack_trace_original_query_spotbugs
 
 class DatabaseConnection:
     def __init__(self, user, password, db=None, host='localhost', port=3306):
@@ -38,7 +46,13 @@ class DatabaseConnection:
     def code_diff(self, diff_table, tool_table):
         cur = self.connection.cursor()
         try:
-            sql_command = generate_code_diff_query(diff_table, tool_table)
+            sql_command = None
+            if tool_table == 'infer':
+              sql_command = generate_code_diff_query_infer(diff_table, tool_table)
+            elif 'sblt' in tool_table or 'sbht' in tool_table:
+              sql_command = generate_code_diff_query_spotbugs(diff_table, tool_table)
+            else:
+              sql_command = generate_code_diff_query(diff_table, tool_table)
             cur.execute(sql_command)
             return cur.fetchall()
         except BaseException:
@@ -48,7 +62,13 @@ class DatabaseConnection:
     def report_diff(self, tool_table):
         cur = self.connection.cursor()
         try:
-            sql_command = generate_report_diff_query(tool_table)
+            sql_command = None
+            if tool_table == 'infer':
+              sql_command = generate_report_diff_query_infer(tool_table)
+            elif 'sblt' in tool_table or 'sbht' in tool_table:
+              sql_command = generate_report_diff_query_spotbugs(tool_table)
+            else:
+              sql_command = generate_report_diff_query(tool_table)
             cur.execute(sql_command)
             return cur.fetchall()
         except BaseException:
@@ -58,7 +78,13 @@ class DatabaseConnection:
     def stack_trace(self, diff_table, tool_table):
         cur = self.connection.cursor()
         try:
-            sql_command = generate_stack_trace_query(diff_table, tool_table)
+            sql_command = None
+            if tool_table == 'infer':
+              sql_command = generate_stack_trace_original_query_infer(diff_table, tool_table)
+            elif 'sblt' in tool_table or 'sbht' in tool_table:
+              sql_command = generate_stack_trace_original_query_spotbugs(diff_table, tool_table)
+            else:
+              sql_command = generate_stack_trace_original_query(diff_table, tool_table)
             cur.execute(sql_command)
             return cur.fetchall()
         except BaseException:
@@ -68,7 +94,13 @@ class DatabaseConnection:
     def covered_lines(self, diff_table, tool_table):
         cur = self.connection.cursor()
         try:
-            sql_command = generate_covered_lines_query(diff_table, tool_table)
+            sql_command = None
+            if tool_table == 'infer':
+              sql_command = generate_covered_lines_original_query_infer(diff_table, tool_table)
+            elif 'sblt' in tool_table or 'sbht' in tool_table:
+              sql_command = generate_covered_lines_original_query_spotbugs(diff_table, tool_table)
+            else:
+              sql_command = generate_covered_lines_original_query(diff_table, tool_table)
             cur.execute(sql_command)
             return cur.fetchall()
         except BaseException:
@@ -204,7 +236,7 @@ class DatabaseConnection:
         sql_command = "CREATE TABLE `{}` (" \
                       "`bug_id` INT NOT NULL AUTO_INCREMENT," \
                       "`image_tag` VARCHAR(200) NOT NULL," \
-                      "`version` VARCHAR(45) NOT NULL," \
+                      "`version` VARCHAR(100) NOT NULL," \
                       "`file` VARCHAR(500) NOT NULL," \
                       "`bug_type` VARCHAR(10000) NOT NULL," \
                       "`bug_lower` INT NOT NULL," \
@@ -451,9 +483,10 @@ class DatabaseConnection:
 def main():
     db = DatabaseConnection('root', 'password')
     # db.init_database(['spotbugs'])
-    db.select_database('github')
-    db.create_github_table()
-    # db.create_tool_table('nullaway_new_bs')
+    #db.select_database('reproduced_study')
+    #db.create_github_table()
+    #db.create_tool_table('sblt_original_correctly_parsed')
+    #db.create_tool_table('sbht_original_correctly_parsed')
     # db.execute('DROP TABLE spotbugslt_severity')
     # db.create_clover_table('clover_fse')
     # db.create_clover_table()

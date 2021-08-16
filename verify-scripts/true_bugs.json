@@ -61,8 +61,8 @@
             },
             {
                 "image_tag": "SonarSource-sonar-java-297969373",
-                "file": "MethodLookupTest.java",
-                "warning": "NULL_DEREFERENCE",
+                "file": "org/sonar/java/bytecode/se/MethodLookupTest.java",
+                "warning": "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
                 "line_num": "48"
             },
             {
@@ -227,7 +227,6 @@
         "report_diff": [
             "Adobe-Consulting-Services-acs-aem-commons-374231969",
             "Adobe-Consulting-Services-acs-aem-commons-374231978",
-            "SynBioDex-libSBOLj-88818413",
             "apache-dubbo-416755517",
             "swagger-api-swagger-core-390509591",
             "winder-Universal-G-Code-Sender-172454077",
