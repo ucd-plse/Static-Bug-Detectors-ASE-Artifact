@@ -4,40 +4,40 @@ import sys
 
 results_expected = {
     'cfnullness': {
-        'stack_trace': 29,
+        'stack_trace': 26,
         'covered_lines': 56,
-        'code_diff': 29,
+        'code_diff': 56,
         'report_diff': 18
     },
     'eradicate': {
-        'stack_trace': 30,
-        'covered_lines': 62,
-        'code_diff': 30,
-        'report_diff': 21
+        'stack_trace': 22,
+        'covered_lines': 52,
+        'code_diff': 51,
+        'report_diff': 24
     },
     'infer': {
-        'stack_trace': 16,
-        'covered_lines': 37,
-        'code_diff': 11,
-        'report_diff': 12
+        'stack_trace': 12,
+        'covered_lines': 27,
+        'code_diff': 23,
+        'report_diff': 13
     },
     'nullaway': {
         'stack_trace': 4,
         'covered_lines': 26,
-        'code_diff': 5,
+        'code_diff': 17,
         'report_diff': 21
     },
     'sbht': {
-        'stack_trace': 20,
-        'covered_lines': 34,
-        'code_diff': 4,
-        'report_diff': 13
+        'stack_trace': 5,
+        'covered_lines': 13,
+        'code_diff': 18,
+        'report_diff': 6
     },
     'sblt': {
-        'stack_trace': 56,
-        'covered_lines': 71,
-        'code_diff': 12,
-        'report_diff': 21
+        'stack_trace': 12,
+        'covered_lines': 26,
+        'code_diff': 46,
+        'report_diff': 13
     }
 }
 
