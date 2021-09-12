@@ -62,7 +62,7 @@ If ran only a specific tool then only that tool should match. All other tools wi
 ```
 $ bash verify-scripts/run_verify_tool_warnings.sh
 ```
-![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.png)
+![tableiii](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiii.PNG)
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
 We offer two options for getting results for Table IV. The first is to use the reproduced warnings that were generated when you ran Step 2. This option may not have the same results as the study due to a bug under study becoming unreproducible. To avoid this issue, you may use the tool warnings we observed in the study. This will produce the exact results reported in Table IV.
@@ -75,7 +75,7 @@ $ bash scripts/database/db_wrapper.sh -r -d study_db
 $ bash scripts/database/db_wrapper.sh -d study_db
 ```
 ### 5. Bug Candidates (2 - 5 hours)
-![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.png)
+![tableiv](https://github.com/ucd-plse/Static-Bug-Detectors-ASE-Artifact/blob/main/tableiv.PNG)
 #### A. Generating bug candidates via mapping methods (2 - 5 hours)
 ```
 $ python3 scripts/database/run_mapping_methods.py study_db
