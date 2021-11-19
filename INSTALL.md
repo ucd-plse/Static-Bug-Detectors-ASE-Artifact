@@ -68,6 +68,15 @@ $ bash verify-scripts/run_verify_tool_warnings.sh
 ### 4. Setting up DB (~10 minutes)
 #### Creating and populating database tables
 We offer two options for getting results for Table IV. The first is to use the reproduced warnings that were generated when you ran Step 2. This option may not have the same results as the study due to a bug under study becoming unreproducible. To avoid this issue, you may use the tool warnings we observed in the study. This will produce the exact results reported in Table IV.
+Note: Make sure that your machine has MySQL installed. Once MySQL is installed, also ensure that the `mysql_native_password` is the plugin selected for authorization on `root` using:
+```
+mysql> SELECT plugin from mysql.user where User='root';
+``` 
+If any plugin besides `mysql_native_password` is listed, you should run the following commands to ensure that the right authentication plugin is selected, otherwise the following scripts will not work:
+```
+mysql> UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
+mysql> FLUSH PRIVILEGES;
+```
 ##### Use reproduced warnings
 ```
 $ bash scripts/database/db_wrapper.sh -r -d study_db
